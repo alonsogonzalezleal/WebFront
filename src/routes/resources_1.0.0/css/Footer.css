@@ -1,0 +1,48 @@
+footer {
+    font-family: 'Roboto';
+    font-size: small;
+    text-align: center;
+    background-color: #000;
+}
+
+footer .container {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+footer .title {
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #ffffff;
+}
+
+footer .contact-mail {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer .contact-mail:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+footer .made-by {
+    background-color: #ffffff;
+    height: 100%;
+    padding: 20px;
+}
+
+footer .section {
+    padding: 15px;
+}
+
+footer .social-icon {
+    color: white;
+    text-decoration: none;
+}
+
+footer .social-icon:hover {
+    color: #333333;
+    text-decoration: none;
+}

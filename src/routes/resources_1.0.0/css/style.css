@@ -1,0 +1,49 @@
+/* General style settings that are applied to all pages. You can include this css file in your Head */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: 'Roboto';
+  margin: 0;
+}
+
+.container {
+    padding: 10px 50px 10px 50px;
+}
+
+.space-10 {
+    height: 10px;
+}
+
+.space-20 {
+    height: 20px;
+}
+
+.space-50 {
+    height: 50px;
+}
+
+.space-100 {
+    height: 100px;
+}
+
+.space-150 {
+    height: 150px;
+}
+
+.space-200 {
+    height: 200px;
+}
+
+.space-250 {
+    height: 250px;
+}
+
+.space-300 {
+    height: 300px;
+}
