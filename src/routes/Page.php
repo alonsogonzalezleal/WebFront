@@ -1,5 +1,5 @@
-<script type="module" src="/src/routes/resources_<?= APP_VERSION ?>/js/routes/Page.js" defer></script>
-<style> @import url('/src/routes/resources_<?= APP_VERSION ?>/css/Page.css'); </style>
+<script type="module" src="/src/routes/resources/js/routes/Page.js?v=<?= APP_VERSION ?>" defer></script>
+<style> @import url('/src/routes/resources/css/Page.css?v=<?= APP_VERSION ?>'); </style>
 
 <section>
     <div class="space-100"></div>

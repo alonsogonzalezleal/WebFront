@@ -1,5 +1,5 @@
-<style> @import url('/src/routes/resources_<?= APP_VERSION ?>/css/Nav.css'); </style>
-<script type="text/javascript" src="/src/routes/resources_<?= APP_VERSION ?>/js/components/Nav.js" defer></script>
+<style> @import url('/src/routes/resources/css/Nav.css?v=<?= APP_VERSION ?>'); </style>
+<script type="text/javascript" src="/src/routes/resources/js/components/Nav.js?v=<?= APP_VERSION ?>" defer></script>
 
 <nav class="nav" id="nav">
   <a href="<?= URL_APP ?>">Home</a>

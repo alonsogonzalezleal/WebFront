@@ -2,6 +2,7 @@
 
 $root = $_SERVER['DOCUMENT_ROOT'];
 
+// Include the required controller files
 require_once "{$root}/src/controllers/HomeController.php";
 require_once "{$root}/src/controllers/SectionController.php";
 require_once "{$root}/src/controllers/AboutController.php";
@@ -22,7 +23,7 @@ class App{
         $this->uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $this->uri = explode('/', $this->uri);
 
-        // Here you can administrate your routes bases
+        // Here, you can manage your controllers, which will contain the routes (paths) for the browser's address bar.
         $this->routesBase = array(
             '' => 'Default@HomeController',
             'about' => 'Default@AboutController',

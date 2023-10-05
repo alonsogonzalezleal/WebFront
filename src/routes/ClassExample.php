@@ -1,5 +1,5 @@
-<script type="module" src="/src/routes/resources_<?= APP_VERSION ?>/js/routes/ClassExample.js" defer></script>
-<style> @import url('/src/routes/resources_<?= APP_VERSION ?>/css/ClassExample.css'); </style>
+<script type="module" src="/src/routes/resources/js/routes/ClassExample.js?v=<?= APP_VERSION ?>" defer></script>
+<style> @import url('/src/routes/resources/css/ClassExample.css?v=<?= APP_VERSION ?>'); </style>
 
 <section>
     <div class="space-100"></div>

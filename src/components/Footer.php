@@ -1,4 +1,4 @@
-<style> @import url('/src/routes/resources_<?= APP_VERSION ?>/css/Footer.css'); </style>
+<style> @import url('/src/routes/resources/css/Footer.css?v=<?= APP_VERSION ?>'); </style>
 
 <div class="space-50"></div>
 <footer id="contact">

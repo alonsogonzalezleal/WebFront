@@ -1,4 +1,4 @@
-<script type="module" src="/src/routes/resources_<?= APP_VERSION ?>/js/routes/404.js" defer></script>
+<script type="module" src="/src/routes/resources/js/routes/404.js?v=<?= APP_VERSION ?>" defer></script>
 
 <div class="space-100"></div>
 <div class="container">

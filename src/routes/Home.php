@@ -6,9 +6,9 @@ $CardSample = "{$root}/src/components/Home/CardSample.php";
 
 ?>
 
-<script type="module" src="/src/routes/resources_<?= APP_VERSION ?>/js/routes/Home.js" defer></script>
-<style> @import url('/src/routes/resources_<?= APP_VERSION ?>/css/Home.css'); </style>
-<style> @import url('/src/routes/resources_<?= APP_VERSION ?>/css/Card.css'); </style>
+<script type="module" src="/src/routes/resources/js/routes/Home.js?v=<?= APP_VERSION ?>" defer></script>
+<style> @import url('/src/routes/resources/css/Home.css?v=<?= APP_VERSION ?>'); </style>
+<style> @import url('/src/routes/resources/css/Card.css?v=<?= APP_VERSION ?>'); </style>
 
 <header>
 	<div class="space-50"></div>
