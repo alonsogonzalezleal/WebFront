@@ -16,7 +16,7 @@ require_once ROOT_PATH . '/src/controllers/HomeController.php';
 require_once ROOT_PATH . '/src/controllers/SectionController.php';
 require_once ROOT_PATH . '/src/controllers/AboutController.php';
 
-if (strpos(URL_APP, 'localhost') !== false) {
+if (strpos(URL, 'localhost') !== false) {
     define('URL_APP', 'http://localhost:8000'); // Change for local debugging
 } else {
     define('URL_APP', 'https://www.mydomain.com'); // Change for production domain
