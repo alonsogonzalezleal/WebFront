@@ -2,7 +2,7 @@
 
 $root = $_SERVER['DOCUMENT_ROOT'];
 
-require_once "{$root}/App.php";
+require_once "{$root}/src/App.php";
 $Head = "{$root}/src/components/Head.php";
 $Nav = "{$root}/src/components/Nav.php";
 $Footer = "{$root}/src/components/Footer.php";
