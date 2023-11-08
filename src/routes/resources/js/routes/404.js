@@ -1,1 +1,0 @@
-document.title = 'Error 404';

@@ -7,45 +7,11 @@ class App{
     private static $routes_base;
     private static $app;
 
-    public static function renderApp($routes_base){
-        if (empty(self::$app)){
-            self::$app = new App($routes_base);
-        }
-        return App::renderBase();
-    }
-
-    public static function renderContent(){
-        $content = URL_ROUTES;
-
-        if (http_response_code() === 404){
-            return $content .= '/404.php';
-        }
-
-        $requested_uri = self::$app->uri[1];
-        $controller = (count($partes = explode('@', self::$app->routes_base[$requested_uri])) === 2) ? $partes[1] : null;
-        $routes = constant("$controller::routes");
-        $sliced_uri = array_slice(self::$app->uri, 1);
-        $requested_uri = '/' . implode('/', $sliced_uri);
-        $requested_uri = (substr($requested_uri, -1) === '/') ? rtrim($requested_uri, '/') : $requested_uri;
-        $matched_route = null;
-
-        foreach ($routes as $pattern => $route){
-            if (preg_match("#^$pattern$#", $requested_uri)){
-                $matched_route = $route;
-                break;
-            }
-        }
-
-        $content .= ($matched_route !== null) ? "/{$matched_route}.php" : '/404.php';
-        
-        return $content;
-    }
-
     private function __construct($routes_base){
 
         $this->root = $_SERVER['DOCUMENT_ROOT'];
-        define("URL_ROUTES", "{$this->root}/src/routes");
-        define("URL_BASES", "{$this->root}/src/routes/bases");
+        define("URL_ROUTES", "{$this->root}/src/routes/Views");
+        define("URL_BASES", "{$this->root}/src/routes/Views/bases");
 
         $this->uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $this->uri = explode('/', $this->uri);
@@ -67,5 +33,39 @@ class App{
         }
 
         return $base;
+    }
+
+    public static function renderApp($routes_base){
+        if (empty(self::$app)){
+            self::$app = new App($routes_base);
+        }
+        return App::renderBase();
+    }
+
+    public static function renderContent(){
+        $content = URL_ROUTES;
+
+        if (http_response_code() === 404){
+            return $content .= '/NotFoundView.php';
+        }
+
+        $requested_uri = self::$app->uri[1];
+        $controller = (count($partes = explode('@', self::$app->routes_base[$requested_uri])) === 2) ? $partes[1] : null;
+        $routes = constant("$controller::routes");
+        $sliced_uri = array_slice(self::$app->uri, 1);
+        $requested_uri = '/' . implode('/', $sliced_uri);
+        $requested_uri = (substr($requested_uri, -1) === '/') ? rtrim($requested_uri, '/') : $requested_uri;
+        $matched_route = null;
+
+        foreach ($routes as $pattern => $route){
+            if (preg_match("#^$pattern$#", $requested_uri)){
+                $matched_route = $route;
+                break;
+            }
+        }
+
+        $content .= ($matched_route !== null) ? "{$matched_route}.php" : '/NotFoundView.php';
+        
+        return $content;
     }
 }
